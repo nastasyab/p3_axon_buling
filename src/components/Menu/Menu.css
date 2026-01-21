@@ -1,0 +1,30 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    width: 60%;
+    margin: 20px auto;
+
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a {
+    color: green;
+}
+
+.menu-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.active {
+    color: red;
+}
+
