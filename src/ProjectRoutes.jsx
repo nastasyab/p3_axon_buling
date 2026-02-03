@@ -1,18 +1,20 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router";
-import { VibrationButton } from "./components/VibrationButton/VibrationButton";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { Menu } from "./components/Menu/Menu";
+import { LandingPage } from "./pages/LandingPage";
+import { Technology } from "./pages/Technology";
+import { Demo } from "./pages/Demo";
 
 export function ProjectRoutes() {
-    return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Menu />}>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/vibration" element={<VibrationButton />} />
-
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    );
-  }
-  
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Menu />}>
+          <Route index element={<LandingPage />} />
+          <Route path="technologie" element={<Technology />} />
+          <Route path="demo" element={<Demo />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}

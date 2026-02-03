@@ -1,0 +1,24 @@
+.scenarioBox {
+  margin-bottom: 14px;
+}
+
+/* Button als Box */
+.scenarioBox .btn {
+  width: 100%;
+  justify-content: flex-start;
+  padding: 12px 12px;
+  text-align: left;
+  border-radius: 0;
+}
+
+/* Hover */
+.scenarioBox .btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Active State */
+.scenarioBox.is-active .btn {
+  background: #000;
+  color: #fff;
+}

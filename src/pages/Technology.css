@@ -1,0 +1,165 @@
+.tech {
+  width: 100%;
+  background: #fff;
+}
+
+/* ---------- Intro ---------- */
+.tech-intro {
+  text-align: center;
+  padding: 90px 16px 70px;
+}
+
+.tech-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  margin: 0 0 18px 0;
+  text-transform: uppercase;
+}
+
+.tech-subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 14px 0;
+}
+
+.tech-lead {
+  font-family: "Roboto", sans-serif;
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--color-muted);
+}
+
+/* ---------- Shared ---------- */
+.tech-container {
+  width: min(100% - 2*var(--g-spacing-xl), 1200px);
+  margin: 0 auto;
+}
+
+.tech-twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.tech-h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: var(--color-text);
+}
+
+.tech-p {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  color: var(--color-muted);
+  max-width: 52ch;
+}
+
+/* ---------- Blocks ---------- */
+.tech-block {
+  padding: 70px 0;
+}
+
+.tech-blockLast {
+  padding-bottom: 110px;
+}
+
+.tech-media {
+  display: flex;
+  justify-content: center;
+}
+
+.tech-mediaRight {
+  justify-content: flex-end;
+}
+
+.tech-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Rope section ---------- */
+.tech-rope {
+  padding: 40px 0 70px;
+}
+
+.tech-ropeInner {
+  width: min(100% - 2*var(--g-spacing-xl), 1200px);
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Rope placeholder spans wide like the screenshot */
+.ph-rope {
+  width: 100%;
+  height: 340px;
+  border-radius: 0;
+}
+
+/* text sits bottom-right-ish */
+.tech-ropeText {
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  width: min(420px, 46%);
+  background: rgba(255,255,255,0.92);
+  padding: 14px 16px;
+}
+
+/* ---------- Placeholders ---------- */
+.ph {
+  background: #e6e6e6;
+  border: 1px solid #bdbdbd;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+/* Module sizes approximate the screenshot */
+.ph-module {
+  width: 420px;
+  height: 260px;
+}
+
+.ph-moduleSmall {
+  width: 300px;
+  height: 210px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 980px) {
+  .tech-twoCol {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .tech-mediaRight {
+    justify-content: center;
+  }
+
+  .ph-module,
+  .ph-moduleSmall {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .tech-ropeText {
+    position: static;
+    width: 100%;
+    margin-top: 14px;
+    background: transparent;
+    padding: 0;
+  }
+
+  .ph-rope {
+    height: 260px;
+  }
+}

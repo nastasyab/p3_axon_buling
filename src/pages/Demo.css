@@ -1,0 +1,59 @@
+.demo {
+  width: 100%;
+  background: #fff;
+}
+
+/* ---------- Intro ---------- */
+.demo-intro {
+  text-align: center;
+  padding: 90px 16px 40px;
+}
+
+.demo-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0 0 18px 0;
+}
+
+.demo-subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+}
+
+.demo-lead {
+  font-family: "Roboto", sans-serif;
+  max-width: 620px;
+  margin: 0 auto;
+  color: var(--color-muted);
+}
+
+/* ---------- Container ---------- */
+.demo-container {
+  width: min(100% - 2*var(--g-spacing-xl), 1200px);
+  margin: 0 auto;
+}
+
+/* ---------- Signals grid ---------- */
+.demo-signals {
+  padding: 40px 0 80px;
+}
+
+.demo-signalGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px;
+  align-items: start;
+}
+
+/* Responsive: Karten untereinander */
+@media (max-width: 980px) {
+  .demo-signalGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

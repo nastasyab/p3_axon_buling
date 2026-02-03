@@ -1,0 +1,20 @@
+.section {
+  text-align: center;
+}
+
+/* Überschrift */
+.section-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 32px;
+  font-weight: 300;          /* dünn, passend zu deinem Header */
+  margin: 0 0 24px 0;        /* Abstand zum Text */
+}
+
+/* Text */
+.section-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  color: var(--color-muted);
+}

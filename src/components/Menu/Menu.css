@@ -1,30 +1,47 @@
-.page {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    width: 60%;
-    margin: 20px auto;
-
-}
-
 .menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  border-bottom: 1px solid var(--color-border);
+  background: #fff;
 }
 
-a {
-    color: green;
+/* Nav ist Bezugspunkt */
+.menu-nav {
+  position: relative;
+  height: 64px;                 /* fixe Header-Höhe */
+  display: flex;
+  align-items: center;
 }
 
-.menu-box {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
+/* --- Logo: ganz links am Viewport --- */
+.menu-logo {
+  position: absolute;
+  left: 1.5rem;                 
+  display: inline-flex;
+  align-items: center;
 }
 
-.active {
-    color: red;
+/* Logo-Größe (wie zuvor) */
+.menu-logo img {
+  height: 28px;
+  transform: scale(2);
+  transform-origin: left center;
+  display: block;
+  padding-top: 4px;
+}
+
+/* --- Zentrale Navigation --- */
+.menu-center {
+  margin: 0 auto;               /* zentriert im Viewport */
+  display: flex;
+  gap: 1.75rem;
+}
+
+.menu-center a {
+  font-family: "Oswald", sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+  text-decoration: none;
+  text-transform: uppercase;
+
 }
 
