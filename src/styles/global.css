@@ -1,7 +1,6 @@
 /* =====================================================
    Global Styles – Single Source of Truth
    ===================================================== */
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap");
 
 /* ---------- Design Tokens ---------- */
 :root {
@@ -36,11 +35,11 @@
   --g-spacing-xxl: 5rem;
 
   /* Colors (neutral, produktionsfähig) */
-  --color-text: #0b0f14;
-  --color-muted: #556271;
+  --color-text: #000000;
+  --color-muted: #000000;
   --color-bg: #ffffff;
   --color-border: #e6eaef;
-  --color-accent: #109ad7;
+  --color-accent: #6dcff6;
 }
 
 /* ---------- Reset / Base ---------- */
@@ -83,8 +82,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration: none;
 }
 
 /* ---------- Buttons (neutral base) ---------- */
@@ -103,9 +101,6 @@ button {
               box-shadow 0.2s ease;
 }
 
-button:hover {
-  border-color: var(--color-accent);
-}
 
 button:focus-visible {
   outline: none;

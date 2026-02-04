@@ -1,20 +1,29 @@
 import "./Technology.css";
+import { Section } from "../components/Section/Section";
+
 
 export function Technology() {
   return (
     <div className="tech">
       {/* Top Intro */}
-      <section className="tech-intro">
-        <h1 className="tech-title">DAS STECKT IN AXON.</h1>
-        <h2 className="tech-subtitle">Jederzeit verbunden</h2>
-        <p className="tech-lead">
-          AXON misst eure Bewegungen und die Spannung des Seils – und hält euch
-          auf dem Laufenden. <br />
-          Du weißt immer, ob dein Partner gerade besondere Aufmerksamkeit braucht. <br />
-          Noch bevor er es weiß.
-        </p>
-      </section>
+    
+<div className="tech-introSpacing">
+  <Section
+    title="DAS STECKT IN AXON."
+    text={
+      <>
+        AXON misst eure Bewegungen und die Spannung des Seils – und hält euch
+        auf dem Laufenden.
+        <br />
+        Du weißt immer, ob dein Partner gerade besondere Aufmerksamkeit braucht.
+        <br />
+        Noch bevor er es weiß.
+      </>
+    }
+  />
 
+
+</div>
       {/* Block 1: Image left, text right */}
       <section className="tech-block">
         <div className="tech-container tech-twoCol">

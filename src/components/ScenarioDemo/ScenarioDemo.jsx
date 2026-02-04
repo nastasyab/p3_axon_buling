@@ -1,17 +1,19 @@
 import "./ScenarioDemo.css";
 import { useState } from "react";
 import { ScenarioBox } from "../ScenarioBox/ScenarioBox";
+import { Section } from "../Section/Section";
+import demoImg from "../../assets/demo_img.png";
 
 export function ScenarioDemo() {
   const [selected, setSelected] = useState(null);
 
   return (
     <section className="scenarioDemo">
-      <div className="scenarioDemo-intro">
-        <h2 className="scenarioDemo-title">SO KÖNNTE ES AUSSEHEN.</h2>
-        <p className="scenarioDemo-hint">
-          Klicke auf ein Szenario, um zu sehen, wie AXON darauf reagiert.
-        </p>
+      <div className="scenarioDemo-introSpacing">
+        <Section
+          title="SO KÖNNTE ES AUSSEHEN."
+          text="Klicke auf ein Szenario, um zu sehen, wie AXON darauf reagiert."
+        />
       </div>
 
       <div className="scenarioDemo-container scenarioDemo-grid">
@@ -23,8 +25,8 @@ export function ScenarioDemo() {
             isActive={selected === "belay_rope"}
             onSelect={() => setSelected("belay_rope")}
           >
-            DAS SEIL IST VERHEDDERt. DER SICHERNDE BRAUCHT EINEN MOMENT, UM ES
-            ZU SORTIEREN.
+            DAS SEIL IST VERHEDDERt. DER SICHERNDE BRAUCHT EINEN MOMENT, UM ES ZU
+            SORTIEREN.
           </ScenarioBox>
 
           <ScenarioBox
@@ -39,11 +41,17 @@ export function ScenarioDemo() {
         {/* Center image placeholder */}
         <div className="scenarioDemo-center">
           <div className="scenarioDemo-photo">
-            Szenario-Foto (Platzhalter)
-            {selected ? (
-              <div className="scenarioDemo-selected">Auswahl: {selected}</div>
-            ) : null}
-          </div>
+  <img
+    src={demoImg}
+    alt="Kletterszenario Demo"
+    className="scenarioDemo-image"
+  />
+
+  {selected ? (
+    <div className="scenarioDemo-selected">Auswahl: {selected}</div>
+  ) : null}
+</div>
+
         </div>
 
         {/* Right column */}

@@ -18,8 +18,6 @@
   display: inline-flex;
   align-items: center;
 }
-
-/* Logo-Größe (wie zuvor) */
 .menu-logo img {
   height: 28px;
   transform: scale(2);
@@ -37,7 +35,7 @@
 
 .menu-center a {
   font-family: "Oswald", sans-serif;
-  font-weight: 100;
+  font-weight: 400;
   letter-spacing: 0.02em;
   color: var(--color-text);
   text-decoration: none;

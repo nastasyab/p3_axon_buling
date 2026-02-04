@@ -3,33 +3,8 @@
   background: #fff;
 }
 
-/* ---------- Intro ---------- */
-.tech-intro {
-  text-align: center;
+.tech-introSpacing {
   padding: 90px 16px 70px;
-}
-
-.tech-title {
-  font-family: "Oswald", sans-serif;
-  font-size: 28px;
-  font-weight: 300;
-  letter-spacing: 0.02em;
-  margin: 0 0 18px 0;
-  text-transform: uppercase;
-}
-
-.tech-subtitle {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0 0 14px 0;
-}
-
-.tech-lead {
-  font-family: "Roboto", sans-serif;
-  max-width: 720px;
-  margin: 0 auto;
-  color: var(--color-muted);
 }
 
 /* ---------- Shared ---------- */
