@@ -1,27 +1,26 @@
 import "./SignalCard.css";
-import { Howl } from "howler";
+import { Howl, Howler } from "howler";
 import { useEffect, useMemo, useState } from "react";
 
 
 export function SignalCard({ id, activeId, onRequestPlay, title, text, soundSrc }) {
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const sound = useMemo(() => {
-    return new Howl({
-      src: [soundSrc],
-      preload: true,
-      onplay: () => setIsPlaying(true),
-      onend: () => setIsPlaying(false),
-      onstop: () => setIsPlaying(false),
-      onpause: () => setIsPlaying(false),
-      onplayerror: () => setIsPlaying(false),
-      onloaderror: () => setIsPlaying(false),
-    });
-  }, [soundSrc]);
+const sound = useMemo(() => {
+  return new Howl({
+    src: [soundSrc],
+    preload: true,
+    html5: true,            // ✅ WICHTIG: umgeht AudioContext/Autoplay-Probleme
+    onplay: () => setIsPlaying(true),
+    onend: () => setIsPlaying(false),
+    onstop: () => setIsPlaying(false),
+    onpause: () => setIsPlaying(false),
+    onplayerror: () => setIsPlaying(false),
+    onloaderror: () => setIsPlaying(false),
+  });
+}, [soundSrc]);
 
-  // Wenn eine andere Karte aktiv wird: diese stoppen
- useEffect(() => {
-  // Stoppe NUR, wenn eine andere Card aktiv ist
+useEffect(() => {
   if (activeId && activeId !== id) {
     sound.stop();
   }
@@ -35,18 +34,16 @@ export function SignalCard({ id, activeId, onRequestPlay, title, text, soundSrc 
     };
   }, [sound]);
 
-  const toggle = () => {
-    // Demo orchestriert: "diese Card ist jetzt die aktive"
-    onRequestPlay?.(id);
+const toggle = () => {
+  onRequestPlay?.(id);
 
-    if (sound.playing()) {
-      sound.stop();
-    } else {
-      sound.stop(); // Start immer bei 0
-      sound.play();
-    }
-  };
-
+  if (sound.playing()) {
+    sound.stop();
+  } else {
+    sound.stop();
+    sound.play();
+  }
+};
   const onKeyDown = (e) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();

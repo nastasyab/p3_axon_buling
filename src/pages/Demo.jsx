@@ -1,6 +1,5 @@
 import "./Demo.css";
-import { useEffect, useState } from "react";
-import { Howler } from "howler";
+import { useState } from "react";
 
 import { Section } from "../components/Section/Section";
 import { SignalCard } from "../components/SignalCard/SignalCard";
@@ -8,26 +7,6 @@ import { ScenarioDemo } from "../components/ScenarioDemo/ScenarioDemo";
 
 export function Demo() {
   const [activeSignalId, setActiveSignalId] = useState(null);
-
-  useEffect(() => {
-    const unlock = async () => {
-      try {
-        if (Howler.ctx && Howler.ctx.state !== "running") {
-          await Howler.ctx.resume();
-        }
-      } catch (e) {
-        console.warn("Could not resume AudioContext:", e);
-      }
-    };
-
-    window.addEventListener("pointerdown", unlock, { once: true });
-    window.addEventListener("keydown", unlock, { once: true });
-
-    return () => {
-      window.removeEventListener("pointerdown", unlock);
-      window.removeEventListener("keydown", unlock);
-    };
-  }, []);
 
   return (
     <div className="demo">
