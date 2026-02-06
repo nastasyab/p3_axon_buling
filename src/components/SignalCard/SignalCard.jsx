@@ -1,30 +1,39 @@
 import "./SignalCard.css";
-import { Howl, Howler } from "howler";
+import { Howl } from "howler";
 import { useEffect, useMemo, useState } from "react";
 
+import moduleImg from "../../assets/axon_modul_play.svg";
 
-export function SignalCard({ id, activeId, onRequestPlay, title, text, soundSrc }) {
+export function SignalCard({
+  id,
+  activeId,
+  onRequestPlay,
+  title,
+  text,
+  soundSrc,
+}) {
   const [isPlaying, setIsPlaying] = useState(false);
 
-const sound = useMemo(() => {
-  return new Howl({
-    src: [soundSrc],
-    preload: true,
-    html5: true,            // ✅ WICHTIG: umgeht AudioContext/Autoplay-Probleme
-    onplay: () => setIsPlaying(true),
-    onend: () => setIsPlaying(false),
-    onstop: () => setIsPlaying(false),
-    onpause: () => setIsPlaying(false),
-    onplayerror: () => setIsPlaying(false),
-    onloaderror: () => setIsPlaying(false),
-  });
-}, [soundSrc]);
+  const sound = useMemo(() => {
+    return new Howl({
+      src: [soundSrc],
+      preload: true,
+      html5: true, 
+      onplay: () => setIsPlaying(true),
+      onend: () => setIsPlaying(false),
+      onstop: () => setIsPlaying(false),
+      onpause: () => setIsPlaying(false),
+      onplayerror: () => setIsPlaying(false),
+      onloaderror: () => setIsPlaying(false),
+    });
+  }, [soundSrc]);
 
-useEffect(() => {
-  if (activeId && activeId !== id) {
-    sound.stop();
-  }
-}, [activeId, id, sound]);
+  // Stoppe Sound, wenn eine andere SignalCard aktiv wird
+  useEffect(() => {
+    if (activeId && activeId !== id) {
+      sound.stop();
+    }
+  }, [activeId, id, sound]);
 
   // Cleanup beim Unmount
   useEffect(() => {
@@ -34,16 +43,17 @@ useEffect(() => {
     };
   }, [sound]);
 
-const toggle = () => {
-  onRequestPlay?.(id);
+  const toggle = () => {
+    onRequestPlay?.(id);
 
-  if (sound.playing()) {
-    sound.stop();
-  } else {
-    sound.stop();
-    sound.play();
-  }
-};
+    if (sound.playing()) {
+      sound.stop();
+    } else {
+      sound.stop(); // Sicherheit: immer bei 0 starten
+      sound.play();
+    }
+  };
+
   const onKeyDown = (e) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
@@ -56,13 +66,19 @@ const toggle = () => {
       className={`signalCard ${isPlaying ? "isPlaying" : ""}`}
       role="button"
       tabIndex={0}
+      aria-pressed={isPlaying}
       onClick={toggle}
       onKeyDown={onKeyDown}
-      aria-pressed={isPlaying}
     >
       <div className="signalCard-media">
-        <div className="signalCard-placeholder">Modul</div>
-      </div>
+  <img
+    src={moduleImg}
+    alt="AXON Gurt-Modul"
+    className="signalCard-image"
+    draggable={false}
+  />
+
+</div>
 
       <div className="signalCard-wave" aria-hidden="true">
         <div className="waveBars">

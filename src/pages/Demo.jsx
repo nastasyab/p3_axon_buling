@@ -5,6 +5,10 @@ import { Section } from "../components/Section/Section";
 import { SignalCard } from "../components/SignalCard/SignalCard";
 import { ScenarioDemo } from "../components/ScenarioDemo/ScenarioDemo";
 
+import attentionSound from "../assets/sounds/attention.mp3";
+import waitSound from "../assets/sounds/wait.mp3";
+import goSound from "../assets/sounds/go.mp3";
+
 export function Demo() {
   const [activeSignalId, setActiveSignalId] = useState(null);
 
@@ -18,8 +22,8 @@ export function Demo() {
               Damit du weißt, was dein Kletterpartner gerade von dir braucht,
               bekommst du Feedback in Form von Vibration.
               <br />
-              Tippe auf die Gurt-Module, um zu hören, wie die verschiedenen Signale
-              klingen.
+              Tippe auf die Gurt-Module, um zu hören, wie die verschiedenen
+              Signale klingen.
             </>
           }
         />
@@ -33,7 +37,7 @@ export function Demo() {
             onRequestPlay={setActiveSignalId}
             title="ACHTUNG!"
             text="Dein Partner braucht gerade besondere Aufmerksamkeit. Möglicherweise deuten seine Bewegungen darauf hin, dass er gleich stürzen könnte."
-            soundSrc="/sounds/attention.mp3"
+            soundSrc={attentionSound}
           />
 
           <SignalCard
@@ -44,7 +48,7 @@ export function Demo() {
             text={`Dein Kletterpartner braucht gerade etwas Zeit, um mit dem Klettern oder dem Seilmanagement hinterherzukommen.
 Gib ihm kurz Zeit.
 Sobald du weitermachen kannst, erhältst du das nächste Signal.`}
-            soundSrc="/sounds/wait.mp3"
+            soundSrc={waitSound}
           />
 
           <SignalCard
@@ -54,7 +58,7 @@ Sobald du weitermachen kannst, erhältst du das nächste Signal.`}
             title="Weiter geht’s!"
             text={`Dein Kletterpartner ist bereit, weiterzumachen.
 Du kannst dein Klettern oder Sichern wie gehabt fortsetzen.`}
-            soundSrc="/sounds/go.mp3"
+            soundSrc={goSound}
           />
         </div>
       </section>

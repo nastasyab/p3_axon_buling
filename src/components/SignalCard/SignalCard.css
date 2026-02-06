@@ -1,26 +1,14 @@
 .signalCard {
   text-align: left;
-  padding: 20px;
+  padding: 60px;
 }
+
 
 /* Modul */
 .signalCard-media {
   display: flex;
   justify-content: center;
   margin-bottom: 18px;
-}
-
-.signalCard-placeholder {
-  width: 220px;
-  height: 170px;
-  background: #e6e6e6;
-  border: 1px solid #bdbdbd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  color: #666;
 }
 
 /* Waveform */
@@ -56,5 +44,50 @@
   margin: 0;
   color: var(--color-muted);
   max-width: 40ch;
+}
+
+
+.scenarioBox {
+  margin-bottom: 14px;
+}
+
+/* Button als Box */
+.scenarioBox .btn {
+  width: 100%;
+  justify-content: flex-start;
+  padding: 12px 12px;
+  text-align: left;
+  border-radius: 0;
+}
+
+/* Hover */
+.scenarioBox .btn:hover {
+  background: #000;
+  color: #fff;
+;}
+
+/* Active State */
+.scenarioBox.is-active .btn {
+  background: #000;
+  color: #fff;
+}
+
+.signalCard-media {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    cursor: pointer
+}
+
+.signalCard-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(1);
+  pointer-events: none;
+  user-select: none;
+;
 }
 
