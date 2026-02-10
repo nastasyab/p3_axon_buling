@@ -79,15 +79,6 @@ export function SignalCard({
   />
 
 </div>
-
-      <div className="signalCard-wave" aria-hidden="true">
-        <div className="waveBars">
-          {Array.from({ length: 12 }).map((_, i) => (
-            <span className="waveBar" key={i} />
-          ))}
-        </div>
-      </div>
-
       <h3 className="signalCard-title">{title}</h3>
       <p className="signalCard-text">{text}</p>
     </article>

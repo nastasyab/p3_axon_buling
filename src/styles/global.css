@@ -34,7 +34,7 @@
   --g-spacing-xl: 2rem;
   --g-spacing-xxl: 5rem;
 
-  /* Colors (neutral, produktionsfähig) */
+  /* Farben */
   --color-text: #000000;
   --color-muted: #000000;
   --color-bg: #ffffff;
@@ -42,7 +42,7 @@
   --color-accent: #6dcff6;
 }
 
-/* ---------- Reset / Base ---------- */
+/*Reset / Base*/
 *,
 *::before,
 *::after {
@@ -59,7 +59,7 @@ body {
   -webkit-text-size-adjust: none;
 }
 
-/* ---------- Typography ---------- */
+/*Typography */
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 var(--g-spacing-md) 0;
   line-height: 1.2;
@@ -74,7 +74,7 @@ p {
   color: var(--color-muted);
 }
 
-/* ---------- Links ---------- */
+/*  Links */
 a {
   font-weight: 500;
   color: var(--color-accent);
@@ -85,7 +85,7 @@ a:hover {
   text-decoration: none;
 }
 
-/* ---------- Buttons (neutral base) ---------- */
+/* buttons (neutral base) */
 button {
   font-family: inherit;
   font-size: 1rem;
@@ -107,7 +107,7 @@ button:focus-visible {
   box-shadow: 0 0 0 3px rgba(16, 154, 215, 0.25);
 }
 
-/* ---------- Media ---------- */
+/* medien */
 img,
 video {
   max-width: 100%;

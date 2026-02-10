@@ -3,11 +3,9 @@
   background: #fff;
 }
 
-
-/* Layout */
 .scenarioDemo-container {
   width: min(100% - 2*var(--g-spacing-xl), 1200px);
-  margin: 0 auto;
+  margin: 40px auto;
 }
 
 .scenarioDemo-grid {
@@ -70,14 +68,19 @@
   position: absolute;
   width: 28px;
   height: 28px;
-  border-radius: 999px;
-  /* zum Debuggen sichtbar – später ggf. opacity: 0; */
   background: rgba(255, 255, 255, 0.25);
   outline: 2px solid rgba(255, 255, 255, 0.7);
   box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Diese Werte musst du an dein Bild anpassen (in %) */
+/* Anpassung an mein Bild */
 .hotspot-climber { left: 1%; top: 1%; }
 .hotspot-rope    { left: 52%; top: 50%; }
 .hotspot-belay   { left: 30%; top: 58%; }
+
+
+.driver-popover .driver-popover-description {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+}

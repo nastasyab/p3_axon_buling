@@ -14,7 +14,7 @@ export function ScenarioPhotoHotspots({ imageSrc, alt, selected, hotspots }) {
         />
       ))}
 
-      {selected ? <div className="scenarioPhoto-selected">Auswahl: {selected}</div> : null}
+    
     </div>
   );
 }

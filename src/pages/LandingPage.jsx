@@ -1,6 +1,7 @@
 import "./LandingPage.css";
 import { Button } from "../components/Button/Button";
 import { Page } from "../components/Page/Page";
+import landingImage from "../assets/landing_page_img.png";
 
 export function LandingPage() {
   return (
@@ -12,7 +13,7 @@ export function LandingPage() {
             <h1 className="hero-title">AXON</h1>
             <p className="hero-subtitle">Verbindung, die man spürt</p>
 
-            <Button to="/demo">Zum Shop</Button>
+            <Button to="https://www.garmin.com/de-DE/">Zum Shop</Button>
           </div>
         </section>
 
@@ -36,7 +37,11 @@ export function LandingPage() {
             </div>
 
             <div className="feature-visual">
-              <div className="image-placeholder">Produktvisual</div>
+              <img
+                src={landingImage}
+                alt="AXON Produktvisualisierung"
+                className="feature-image"
+              />
             </div>
           </div>
         </section>

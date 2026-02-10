@@ -8,15 +8,15 @@ export const hotspots = {
 // Default-Texte (Fallback)
 export const hotspotCopy = {
   climber: {
-    title: "Der Kletternde",
+    title: "",
     description: "AXON erkennt Bewegungen und Belastung beim Klettern.",
   },
   rope: {
-    title: "Das Seil",
+    title: "",
     description: "Die Seildehnung liefert wichtige Kontextinformationen.",
   },
   belay: {
-    title: "Der Sichernde",
+    title: "",
     description: "Bewegungen und Seilhandling werden kontinuierlich erfasst.",
   },
 };
@@ -28,19 +28,16 @@ export const tours = {
 
     copy: {
       rope: {
-        title: "Verheddertes Seil",
         description:
-          "Ungewöhnliche Seilbewegungen deuten darauf hin, dass der Sichernde kurz blockiert ist.",
+          "Zusammen mit der Seilspannung ergibt sich ein vollständiges Bild: der Sichernde braucht etwas Zeit.",
       },
       climber: {
-        title: "Wartender Kletternder",
         description:
-          "Der Kletternde hält inne – AXON erkennt die Diskrepanz zwischen beiden.",
+          'Der Kletternde erhält das Signal "Warten!" Jetzt hat der Sichernde genug Zeit, um das Seil zu sortieren.',
       },
       belay: {
-        title: "Sichernder braucht Zeit",
         description:
-          "AXON signalisiert dem Kletternden: kurz warten.",
+          "AXON merkt, dass die Bewegungen des Sichernden ungewöhnlich sind.",
       },
     },
 
@@ -48,23 +45,20 @@ export const tours = {
   },
 
   belay_distracted: {
-    order: ["belay", "rope", "climber"],
+    order: ["rope", "belay", "climber"],
 
     copy: {
       rope: {
-        title: "Verheddertes Seil",
         description:
-          "Ungewöhnliche Seilbewegungen deuten darauf hin, dass der Sichernde kurz blockiert ist.",
+          "AXON misst eine unerwartet niedrige Seilspannung.",
       },
       climber: {
-        title: "Wartender Kletternder",
         description:
-          "Der Kletternde hält inne – AXON erkennt die Diskrepanz zwischen beiden.",
+          'Der Kletternde erhält das Signal "Warten!" Er darf weiterklettern, sobald der Sichernde wieder aufmerksam sein kann.',
       },
       belay: {
-        title: "Sichernder braucht Zeit",
         description:
-          "AXON signalisiert dem Kletternden: kurz warten.",
+          "Das hat auch einen Grund: Der Sichernde wird gerade von einer fremden Person angesprochen."
       },
     },
 
@@ -77,19 +71,16 @@ export const tours = {
     order: ["climber", "rope", "belay"],
     copy: {
       climber: {
-        title: "Erhöhtes Sturzrisiko",
         description:
-          "Unruhige Bewegungen und abrutschende Füße deuten auf einen möglichen Sturz hin.",
+          "Unruhige Bewegungen und abrutschende Füße deuten darauf hin, dass der Kletternde gleich stürzen könnte.",
       },
       rope: {
-        title: "Hohe Seilbelastung",
         description:
-          "Das Seil steht unter erhöhter Spannung – ein Sturz ist wahrscheinlich.",
+          "Die Spannung des Seils ist normal - aber die Bewegungen des Kletternden sind eindeutig!",
       },
       belay: {
-        title: "Sichernder muss reagieren",
         description:
-          "AXON warnt den Sichernden, sofort aufmerksam zu sein.",
+          'Der Sichernde erhält das Signal "ACHTUNG!" Er zieht das Seil fest und ist auf einen möglichen Sturz vorbereitet.',
       },
     },
   },
@@ -99,19 +90,16 @@ export const tours = {
     order: ["climber", "rope", "belay"],
     copy: {
       climber: {
-        title: "Erhöhtes Sturzrisiko",
         description:
-          "Unruhige Bewegungen und abrutschende Füße deuten auf einen möglichen Sturz hin.",
+          "Der Kletternde pausiert. Die Bewegungssensoren an seinem Klettergurt messen, dass er sich nicht bewegt.",
       },
       rope: {
-        title: "Hohe Seilbelastung",
         description:
-          "Das Seil steht unter erhöhter Spannung – ein Sturz ist wahrscheinlich.",
+          "Die Seildehnung wird immer geringer.",
       },
       belay: {
-        title: "Sichernder muss reagieren",
         description:
-          "AXON warnt den Sichernden, sofort aufmerksam zu sein.",
+          'Der Sichernde erhält das Signal "Warten!" Sobald der Kletternde sich wieder bewegt, bekommt er das Signal zum Fortsetzen.',
       },
     },
   },
@@ -121,19 +109,16 @@ climb_continue: {
     order: ["climber", "rope", "belay"],
     copy: {
       climber: {
-        title: "Erhöhtes Sturzrisiko",
         description:
-          "Unruhige Bewegungen und abrutschende Füße deuten auf einen möglichen Sturz hin.",
+          "Der Kletternde hat Kraft getankt und kann wieder weiterklettern. AXON merkt, dass er sich bewegt.",
       },
       rope: {
-        title: "Hohe Seilbelastung",
         description:
-          "Das Seil steht unter erhöhter Spannung – ein Sturz ist wahrscheinlich.",
+          "Die Spannung des Seils erhöht sich.",
       },
       belay: {
-        title: "Sichernder muss reagieren",
         description:
-          "AXON warnt den Sichernden, sofort aufmerksam zu sein.",
+          'Der Kletternde erhält das Signal "Fortsetzen!" Er kann wie gehabt weitersichern.',
       },
     },
   },

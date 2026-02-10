@@ -8,13 +8,11 @@
 }
 
 
-/* ---------- Container ---------- */
 .demo-container {
   width: min(100% - 2*var(--g-spacing-xl), 1200px);
   margin: 0 auto;
 }
 
-/* ---------- Signals grid ---------- */
 .demo-signals {
   padding: 40px 0 80px;
 }

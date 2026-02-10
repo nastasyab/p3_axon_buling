@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-/* --- Logo: ganz links am Viewport --- */
+/* Logo: ganz links am Viewport */
 .menu-logo {
   position: absolute;
   left: 1.5rem;                 
@@ -26,9 +26,9 @@
   padding-top: 4px;
 }
 
-/* --- Zentrale Navigation --- */
+/* Zentrale Navigation */
 .menu-center {
-  margin: 0 auto;               /* zentriert im Viewport */
+  margin: 0 auto;               
   display: flex;
   gap: 1.75rem;
 }

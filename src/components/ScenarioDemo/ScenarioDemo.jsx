@@ -120,7 +120,7 @@ export function ScenarioDemo() {
             onSelect={() => selectScenario("climb_pause")}
           >
             DER KLETTERNDE MACHT GERADE EINE PAUSE. DER SICHERNDE SIEHT IHN
-            ALLERDINGS NICHT UND MERKT ZUERST NICHT, DASS ER PAUSIEREN MUSS.
+            ALLERDINGS NICHT UND ZIEHT WEITER SEIL NACH.
           </ScenarioBox>
 
           <ScenarioBox

@@ -12,14 +12,9 @@
   position: absolute;
   width: 28px;
   height: 28px;
-  border-radius: 999px;
   transform: translate(-50%, -50%); /* zentriert auf x/y */
   background: rgba(255, 255, 255, 0.25);
   outline: 2px solid rgba(255, 255, 255, 0.75);
   box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.15);
-  opacity: 0; pointer-events: none;
+  opacity: 0; pointer-events: none; /* unsichtbar */
 }
-
-/* später, wenn du sie unsichtbar willst:
-.hotspot { opacity: 0; pointer-events: none; }
-*/
