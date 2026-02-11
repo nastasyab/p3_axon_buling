@@ -2,6 +2,8 @@ import "./LandingPage.css";
 import { Button } from "../components/Button/Button";
 import { Page } from "../components/Page/Page";
 import landingImage from "../assets/landing_page_img.png";
+import logoTransparent from "../assets/axon_logo_transparent.png";
+
 
 export function LandingPage() {
   return (
@@ -10,7 +12,7 @@ export function LandingPage() {
         {/* hero */}
         <section className="hero">
           <div className="hero-content">
-            <h1 className="hero-title">AXON</h1>
+            <img class = "hero-title-logo" src={logoTransparent} alt="AXON Logo" />
             <p className="hero-subtitle">Verbindung, die man spürt</p>
 
             <Button to="https://www.garmin.com/de-DE/">Zum Shop</Button>
